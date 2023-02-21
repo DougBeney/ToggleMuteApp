@@ -34,3 +34,9 @@ if len(sys.argv) > 1:
 			['pactl', 'set-sink-input-mute', sinks[app], 'toggle']
 		)
 		print(cmd.decode('utf-8'))
+else:
+	print('Usage toggle-mute-app [sink-input ID]')
+	print()
+	print('Sinks:')
+	for s in sinks:
+		print(' -', s)
